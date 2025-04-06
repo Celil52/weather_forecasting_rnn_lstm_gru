@@ -9,12 +9,11 @@ Bu proje için kullanılan ham hava durumu verileri [Kaggle'dan]([https://www.ka
 
   )) alınmıştır.
 
-**Lisans**: [Veri kaynağındaki lisansı buraya yaz]
 
 Veri büyüklüğü nedeniyle bu repoda paylaşılmamıştır. Aşağıdaki adımları izleyerek veriyi indirip `temizlenmis_veri.csv` dosyasını oluşturabilirsiniz:
 
 1. Kaggle hesabı oluşturun.
-2. Veriyi şu linkten indirin: [Veri linki]
+2. Veriyi yukardıdaki linkten indirin:
 3. Dosyayı `data/raw/` klasörüne yerleştirin.
 4. `prepare_data.py` dosyasını çalıştırarak `temizlenmis_veri.csv`'yi oluşturun.
    
@@ -41,6 +40,8 @@ Veri büyüklüğü nedeniyle bu repoda paylaşılmamıştır. Aşağıdaki adı
 Aşağıdaki kütüphaneler `requirements.txt` içinde belirtilmiştir. Ortamı kurmak için:
 
 ```bash
+python -m venv venv
+source venv/bin/activate  # Windows için: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
@@ -88,6 +89,7 @@ Modeller `walk-forward validation` yöntemiyle test edilmiştir. Kısa ve uzun v
 - `temizlenmis_veri.csv` dosyası hazır olarak klasöre eklenmiştir.
 - Projede `"shuffle=False"` ile zaman serisi yapısı korunmuştur.
 - `venv/` klasörü `.gitignore` içinde olup repoya dahil edilmemelidir.
+- en iyi model GRU ve LSTM olarak bulunmuştur, isterseniz sadece onları deneyebilirsiniz. 
 
 ## 👤 Yazar
 
