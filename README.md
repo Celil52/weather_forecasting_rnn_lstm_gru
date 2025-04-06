@@ -5,7 +5,9 @@ Bu proje, geçmiş meteorolojik verilerden yola çıkarak sıcaklık tahmini yap
 
 ## Veri Hakkında
 
-Bu proje için kullanılan ham hava durumu verileri [Kaggle'dan](https://www.kaggle.com/...) alınmıştır.
+Bu proje için kullanılan ham hava durumu verileri [Kaggle'dan]([https://www.kaggle.com/...](https://www.kaggle.com/datasets/alistairking/weather-long-term-time-series-forecasting 
+
+  )) alınmıştır.
 
 **Lisans**: [Veri kaynağındaki lisansı buraya yaz]
 
