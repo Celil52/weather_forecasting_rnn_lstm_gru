@@ -37,17 +37,27 @@ Veri büyüklüğü nedeniyle bu repoda paylaşılmamıştır. Aşağıdaki adı
 
 ## 📦 Gereksinimler
 
-Aşağıdaki kütüphaneler `requirements.txt` içinde belirtilmiştir. Ortamı kurmak için:
+Bu proje için **Python 3.10.x** kullanılması önerilir. Python 3.11 ve sonrası TensorFlow ile uyumlu olmayabilir.  
+Sanal ortam oluşturup bağımlılıkları yüklemek için aşağıdaki adımları izleyin:
 
 ```bash
-python -m venv venv
-source venv/bin/activate  # Windows için: venv\Scripts\activate
+# Sanal ortam oluştur (Python 3.10 ile)
+py -3.10 -m venv venv
+
+# Ortamı aktif et (Windows için)
+venv\Scripts\activate
+
+# Pip'i güncelle ve gerekli paketleri yükle
+pip install --upgrade pip
 pip install -r requirements.txt
 ```
+💡 Not: Python 3.13 kullanıyorsanız TensorFlow yüklenemez, bu yüzden Python 3.10 yükleyip sanal ortamı onunla oluşturmalısınız.
 
 Python 3.10+ önerilir.
 
 ## 🔧 Kurulum ve Çalıştırma
+
+> 🛠️ Kurulumdan önce sanal ortamı oluşturduğunuzdan ve aktif ettiğinizden emin olun (`venv\Scripts\activate`).
 
 1. **Veriyi Hazırla:**
    ```bash
