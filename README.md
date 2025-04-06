@@ -34,6 +34,14 @@ Veri büyüklüğü nedeniyle bu repoda paylaşılmamıştır. Aşağıdaki adı
 ├── requirements.txt            # Gereken kütüphaneler
 └── README.md                   # Bu dosya
 ```
+## 📂 Dosyalar Ne İşe Yarar?
+
+- `prepare_data.py`: Veriyi temizler ve normalize eder.
+- `model_rnn.py`: Basit RNN modeliyle tahmin yapar.
+- `model_lstm.py`: LSTM ile tahmin yapar.
+- `model_gru.py`: GRU ile tahmin yapar.
+- `model_*_upgraded.py`: Walk-forward validation içeren gelişmiş sürümler.
+- `visualize.py`: Tahmin edilen ve gerçek sıcaklıkları karşılaştırır.
 
 ## 📦 Gereksinimler
 
