@@ -3,6 +3,19 @@
 
 Bu proje, geçmiş meteorolojik verilerden yola çıkarak sıcaklık tahmini yapmak amacıyla geliştirilmiştir. RNN tabanlı farklı derin öğrenme modelleri (Simple RNN, LSTM, GRU) kullanılarak hem kısa vadeli (1 gün sonrası) hem de uzun vadeli (5 gün sonrası) tahmin senaryoları test edilmiştir.
 
+## Veri Hakkında
+
+Bu proje için kullanılan ham hava durumu verileri [Kaggle'dan](https://www.kaggle.com/...) alınmıştır.
+
+**Lisans**: [Veri kaynağındaki lisansı buraya yaz]
+
+Veri büyüklüğü nedeniyle bu repoda paylaşılmamıştır. Aşağıdaki adımları izleyerek veriyi indirip `temizlenmis_veri.csv` dosyasını oluşturabilirsiniz:
+
+1. Kaggle hesabı oluşturun.
+2. Veriyi şu linkten indirin: [Veri linki]
+3. Dosyayı `data/raw/` klasörüne yerleştirin.
+4. `prepare_data.py` dosyasını çalıştırarak `temizlenmis_veri.csv`'yi oluşturun.
+   
 ## 📁 Proje Yapısı
 
 ```
