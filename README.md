@@ -8,14 +8,6 @@ Bu proje, geçmiş meteorolojik verilerden yola çıkarak sıcaklık tahmini yap
 Bu proje için kullanılan ham hava durumu verileri [Kaggle'dan]([https://www.kaggle.com/...](https://www.kaggle.com/datasets/alistairking/weather-long-term-time-series-forecasting 
 
   )) alınmıştır.
-
-
-Veri büyüklüğü nedeniyle bu repoda paylaşılmamıştır. Aşağıdaki adımları izleyerek veriyi indirip `temizlenmis_veri.csv` dosyasını oluşturabilirsiniz:
-
-1. Kaggle hesabı oluşturun.
-2. Veriyi yukardıdaki linkten indirin:
-3. Dosyayı `data/raw/` klasörüne yerleştirin.
-4. `prepare_data.py` dosyasını çalıştırarak `temizlenmis_veri.csv`'yi oluşturun.
    
 ## 📁 Proje Yapısı
 
@@ -30,6 +22,7 @@ Veri büyüklüğü nedeniyle bu repoda paylaşılmamıştır. Aşağıdaki adı
 ├── model_lstm_upgraded.py      # Walk-forward kullanılan LSTM
 ├── model_gru_upgraded.py       # Walk-forward kullanılan GRU
 ├── visualize.py                # Tahmin - gerçek karşılaştırma grafikleri
+├── weather_forecast.csv        # Ham Veri
 ├── temizlenmis_veri.csv        # Temizlenmiş ve işlenmiş veri
 ├── requirements.txt            # Gereken kütüphaneler
 └── README.md                   # Bu dosya
@@ -67,10 +60,16 @@ Python 3.10+ önerilir.
 
 > 🛠️ Kurulumdan önce sanal ortamı oluşturduğunuzdan ve aktif ettiğinizden emin olun (`venv\Scripts\activate`).
 
-1. **Veriyi Hazırla:**
-   ```bash
-   python prepare_data.py
-   ```
+## 🔄 Veri Ön İşleme
+
+Projede kullanılan verinin orijinal hali `weather_forecast.csv` dosyasında yer almaktadır.  
+Veriyi modele uygun hale getirmek için aşağıdaki komutu çalıştırabilirsiniz:
+
+```bash
+python prepare_data.py
+```
+Bu işlem sonucunda temizlenmis_veri.csv adlı dosya oluşur ve modeller bu veriyi kullanır.
+-ya da doğrudan temizlenmis_veri.csv dosyasını kullanabilirsiniz.-
 
 2. **Modeli Eğit:**
    - Örneğin Basit GRU:
