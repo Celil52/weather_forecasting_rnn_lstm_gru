@@ -21,7 +21,7 @@ Bu proje için kullanılan ham hava durumu verileri [Kaggle'dan]([https://www.ka
 ├── model_rnn_upgraded.py       # Walk-forward kullanılan RNN
 ├── model_lstm_upgraded.py      # Walk-forward kullanılan LSTM
 ├── model_gru_upgraded.py       # Walk-forward kullanılan GRU
-├── visualize.py                # Tahmin - gerçek karşılaştırma grafikleri
+├── visualize.py                # Veriyi görselleştirmede kullanılan dosya
 ├── weather_forecast.csv        # Ham Veri
 ├── temizlenmis_veri.csv        # Temizlenmiş ve işlenmiş veri
 ├── requirements.txt            # Gereken kütüphaneler
@@ -34,7 +34,7 @@ Bu proje için kullanılan ham hava durumu verileri [Kaggle'dan]([https://www.ka
 - `model_lstm.py`: LSTM ile tahmin yapar.
 - `model_gru.py`: GRU ile tahmin yapar.
 - `model_*_upgraded.py`: Walk-forward validation içeren gelişmiş sürümler.
-- `visualize.py`: Tahmin edilen ve gerçek sıcaklıkları karşılaştırır.
+- `visualize.py`: Veriyi görselleştirir.
 
 ## 📦 Gereksinimler
 
@@ -80,12 +80,7 @@ Bu işlem sonucunda temizlenmis_veri.csv adlı dosya oluşur ve modeller bu veri
      ```bash
      python model_lstm_upgraded.py
      ```
-
-3. **Görselleştirme:**
-   - Tahmin/Gerçek sıcaklık grafiği çizmek için:
-     ```bash
-     python visualize.py
-     ```
+     dosyalarda sonuçları görselleştirelecek yapı hazır bulunmaktadır.
 
 ## 🧠 Kullanılan Modeller
 
@@ -93,7 +88,7 @@ Bu işlem sonucunda temizlenmis_veri.csv adlı dosya oluşur ve modeller bu veri
 - `LSTM`: Uzun süreli bağımlılıkları öğrenmede başarılı  
 - `GRU`: LSTM’e benzer performans gösteren daha sade yapı  
 
-Modeller `walk-forward validation` yöntemiyle test edilmiştir. Kısa ve uzun vadeli (1 gün – 5 gün sonrası) tahminler yapılmıştır.
+Modeller `walk-forward validation` yöntemiyle test edilmiştir.Bu test edilen dosyalara model_*_upgraded ile ulaşabilirsiniz. Kısa ve uzun vadeli (1 gün – 5 gün sonrası) tahminler yapılmıştır.
 
 ## 📊 Performans Değerlendirmesi
 
